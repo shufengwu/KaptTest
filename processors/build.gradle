@@ -1,0 +1,22 @@
+apply plugin: 'kotlin'
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    compile 'com.google.auto.service:auto-service:1.0-rc2'
+    compile project(':annotations')
+    compile 'org.jetbrains.kotlin:kotlin-stdlib:1.1.2-4'
+    compile 'com.squareup:kotlinpoet:0.3.0'
+}
